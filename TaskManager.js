@@ -1,7 +1,7 @@
 export default class TaskManager {
-    constructor() {
-        // Завантаження задач із localStorage або ініціалізація порожнього списку
-        const savedTasks = localStorage.getItem('tasks');
+    constructor(type) {
+        this.type = type;
+        const savedTasks = localStorage.getItem(type);
         this.tasks = savedTasks ? JSON.parse(savedTasks) : [];
         this.subscribers = [];
         this.notify(); // Сповіщення підписників після завантаження
@@ -19,7 +19,7 @@ export default class TaskManager {
 
     // Збереження задач у localStorage
     saveTasks() {
-        localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        localStorage.setItem(this.type, JSON.stringify(this.tasks));
     }
 
     // Додавання нової задачі

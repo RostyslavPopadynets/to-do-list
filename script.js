@@ -1,7 +1,8 @@
 import TaskManager from './TaskManager.js';
 
 document.addEventListener("DOMContentLoaded", () => {
-    const taskManager = new TaskManager();
+    let taskManager = new TaskManager('personal');
+    const tabs = document.querySelectorAll('.tab');
     const taskList = document.querySelector('.todo-list');
     const inputField = document.querySelector('.todo-input input');
     const addButton = document.querySelector('.add-button');
@@ -30,6 +31,18 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const type = tab.getAttribute('data-type');
+            taskManager = new TaskManager(type); // Оновлення taskManager для вибраного табу
+            taskManager.subscribe(renderTasks);
+            renderTasks(taskManager.tasks); // Рендер задач для нового табу
+        });
+    });
 
     // Підписка на зміни в стейті для автоматичного рендерінгу
     taskManager.subscribe(renderTasks);

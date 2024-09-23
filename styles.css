@@ -89,7 +89,6 @@ ul.todo-list li {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    border-bottom: 1px solid #eee;
 }
 
 ul.todo-list li label {
@@ -99,11 +98,21 @@ ul.todo-list li label {
     font-size: 16px;
     color: #666;
     text-decoration: none;
+    border-bottom: 1px solid #29355a;
 }
 
 ul.todo-list li input[type="checkbox"]:checked + label {
     text-decoration: line-through;
     color: #d68b42;
+}
+
+.to-do-content {
+    width: 1040px;
+    border: 1px solid gray;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background: lightgray;
 }
 
 ul.todo-list li label.completed {
