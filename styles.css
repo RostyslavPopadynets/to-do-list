@@ -8,19 +8,20 @@ body {
 }
 
 .todo-container {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    width: 1440px;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.25rem 0.9375rem rgba(0, 0, 0, 0.1);
+    width: 90rem;
     text-align: center;
 }
 
 header {
     background: darkgray;
     display: flex;
-    height: 100px;
+    height: 6.25rem;
     align-content: space-between;
     justify-content: space-around;
     align-items: center;
@@ -29,15 +30,15 @@ header {
 .tabs {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    border-bottom: 0.125rem solid #ccc;
+    margin-bottom: 1.25rem;
 }
 
 .tab {
     background: lightgray;
     font-size: medium;
     flex: 1;
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
     outline: none;
     cursor: pointer;
@@ -46,64 +47,64 @@ header {
 }
 
 .tab.active {
-    border-bottom: 2px solid #d68b42;
+    border-bottom: 0.125rem solid #d68b42;
 }
 
 .todo-input {
     z-index: 1;
     display: flex;
-    width: 1040px;
-    margin-left: 200px;
+    width: 65rem;
+    margin-left: 12.5rem;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .todo-input input {
     background: lightgray;
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
+    padding: 0.625rem;
+    border: 0.0625rem solid #ccc;
+    border-radius: 1.25rem;
     outline: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .add-button {
     background-color: #76B7CD;
     color: white;
-    margin-left: -20px;
+    margin-left: -1.25rem;
     border: none;
     z-index: 2;
-    padding: 10px 20px;
-    border-radius: 0 20px 20px 0;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0 1.25rem 1.25rem 0;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
 }
 
 ul.todo-list {
     list-style: none;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 ul.todo-list li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 0.625rem;
 }
 
 ul.todo-list li label {
     flex-grow: 1;
-    margin-left: 10px;
+    margin-left: 0.625rem;
     text-align: left;
     font-family: poppins, sans-serif;
     font-weight: 400;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 2rem;
+    line-height: 3rem;
     color: #666;
     text-decoration: none;
-    border-bottom: 1px solid #76B7CD;
+    border-bottom: 0.0625rem solid #76B7CD;
 }
 
 ul.todo-list li input[type="checkbox"]:checked + label {
@@ -120,11 +121,11 @@ ul.todo-list li input[type="checkbox"]:checked + label {
 }
 
 .to-do-content {
-    width: 1040px;
-    border: 1px solid gray;
-    margin-left: 200px;
-    margin-bottom: 30px;
-    border-radius: 20px;
+    width: 65rem;
+    border: 0.0625rem solid gray;
+    margin-left: 12.5rem;
+    margin-bottom: 1.875rem;
+    border-radius: 1.25rem;
     background: lightgray;
 }
 
@@ -137,7 +138,7 @@ ul.todo-list li label.completed {
     padding: 0;
     background: none;
     border: none;
-    font-size: 18px;
+    font-size: 1.125rem;
     cursor: pointer;
     color: #ff6b6b;
 }
@@ -145,15 +146,15 @@ ul.todo-list li label.completed {
 .clear-button {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 50px 50px 20px 20px;
+    gap: 0.625rem;
+    padding: 3.125rem 3.125rem 1.25rem 1.25rem;
     float: right;
     background-color: transparent;
     font-family: poppins, sans-serif;
-    line-height: 36px;
+    line-height: 2.25rem;
     border: none;
     color: #D98326;
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
     font-weight: 400;
 }
