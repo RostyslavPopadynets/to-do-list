@@ -8,6 +8,8 @@ body {
 }
 
 .todo-container {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -67,7 +69,7 @@ header {
 }
 
 .add-button {
-    background-color: #70b2c9;
+    background-color: #76B7CD;
     color: white;
     margin-left: -20px;
     border: none;
@@ -95,15 +97,26 @@ ul.todo-list li label {
     flex-grow: 1;
     margin-left: 10px;
     text-align: left;
-    font-size: 16px;
+    font-family: poppins, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
     color: #666;
     text-decoration: none;
-    border-bottom: 1px solid #29355a;
+    border-bottom: 1px solid #76B7CD;
 }
 
 ul.todo-list li input[type="checkbox"]:checked + label {
     text-decoration: line-through;
     color: #d68b42;
+}
+
+.checkbox-checked {
+    display: block;
+}
+
+.checkbox-unchecked {
+    display: none;
 }
 
 .to-do-content {
@@ -117,10 +130,11 @@ ul.todo-list li input[type="checkbox"]:checked + label {
 
 ul.todo-list li label.completed {
     text-decoration: line-through;
-    color: #d68b42;
+    color: #C2C2C2;
 }
 
 .delete-button {
+    padding: 0;
     background: none;
     border: none;
     font-size: 18px;
@@ -129,13 +143,21 @@ ul.todo-list li label.completed {
 }
 
 .clear-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 50px 20px 20px;
+    float: right;
     background-color: transparent;
+    font-family: poppins, sans-serif;
+    line-height: 36px;
     border: none;
-    color: #d68b42;
-    font-size: 14px;
+    color: #D98326;
+    font-size: 24px;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 400;
 }
+
 
 .clear-button:hover {
     text-decoration: underline;
